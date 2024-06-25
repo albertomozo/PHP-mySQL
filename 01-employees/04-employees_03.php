@@ -23,7 +23,7 @@ function obtener_edad_segun_fecha($fecha_nacimiento)
     WHERE employees.emp_no >= 300000
     ORDER BY employees.birth_date DESC;';
     $resultado = mysqli_query($mysqli, $query); // ejecuta la query y la guarda en memoria
-    $ano_limite = 18;
+    $ano_limite = 60;
     echo '<h1>Employees<h1>';
     echo "<h2>Año limite : $ano_limite</h2>";
     ?>
