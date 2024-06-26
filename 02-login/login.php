@@ -10,10 +10,11 @@
 <body>
 <div id="container">
     <?php
-     if (isset($_GET['mes'])){
-        // personalizar error
-        // mensaje generico
-        echo "<p>Error usuario y/o contraseña</p>";
+    // personalizar error
+     if (isset($_GET['msg'])){
+        
+        $errores = ['error Nombre y usuario 0 ','Error EN DB 1 ','vacio 2'];
+        echo "<p>".$errores[$_GET['msg']]."</p>";
      }
     ?>
         <form action="acceso.php" method="POST">

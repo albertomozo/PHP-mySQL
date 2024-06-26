@@ -4,19 +4,28 @@
     // isset 
     $seguir = 'SI';
     if (isset($_POST['usuario']))
-    {$usuario = $_POST['usuario'] ;} else { 
+    {
+        $usuario = $_POST['usuario'] ;    
         if (empty($usuario)){ // validacion
             $seguir = 'NO';
             $msg = 0; // numero de mensaje de error. Sirve para personalizar errores
         }
+    } else { 
+        $seguir ='N0';
+        $msg = 2;  
     }
     if (isset($_POST['password']))
-    {$password = $_POST['password'] ;} 
-    else { 
+    {
+        $password = $_POST['password'] ;
         if (empty($password)){ // validacion
             $seguir ='NO';
             $msg = 0; // numero de mensaje de error. Sirve para personalizar errores
         }
+    
+    } 
+    else { 
+        $seguir ='N0';
+        $msg = 2;  
     }
     if ($seguir == 'SI'){
         $query = "SELECT * FROM usuarios WHERE usuario = '$usuario' and password = '$password'";
@@ -31,12 +40,12 @@
              header("location:acceso_correcto.php");
             
         } else {
-            header("location:login.php?mes=1");
+            header("location:login.php?msg=1");
         }  
 
         
     } else {
-        header("location:login.php?mes=$msg");
+        header("location:login.php?msg=$msg");
     }
  
 ?>
