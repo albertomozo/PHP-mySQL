@@ -59,7 +59,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $passwordErr = "Contraseña es requerida";
         $error = true;
     } else {
-        $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
+        //$password = password_hash($_POST['password'], PASSWORD_BCRYPT);
+        $password = $_POST['password'];
     }
 
     if (empty($_POST['telefono'])) {

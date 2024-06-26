@@ -6,6 +6,9 @@ Ejemplos de conexión a Base de Datos y queries de consulta.
 
 ## 📁02-login
 
+
+![Diagrama de fluj](images/login.png)
+
 Codigo de login sobre una tabla usuarios.
 
 login.php        ->   acceso.php    -> acceso_correcto.php
