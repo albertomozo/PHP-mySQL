@@ -19,3 +19,13 @@ fichero sql para genera la tabla
 
 ## conexion.php 
 fichero con la conexion a la BASE DE DATOS
+
+## login.php 
+
+## registro_ia.php
+
+Resgistro de usuarios
+
+## registro_ia_ajax.php
+
+registros de usurio con validación AJAX de usuario email. (validate.js, check_user.php)
